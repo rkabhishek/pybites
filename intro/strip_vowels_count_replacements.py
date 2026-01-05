@@ -2,10 +2,12 @@ VOWELS = 'aeiou'
 
 def strip_vowels(text: str) -> tuple[str, int]:
     vowel_count = 0
-    text_as_list = list(text)
-    for i, ch in enumerate(text_as_list):
+    result = []
+    for ch in text:
         if ch.lower() in VOWELS:
-            text_as_list[i] = '*'
+            result.append('*')
             vowel_count += 1
+        else:
+            result.append(ch)
 
-    return "".join(text_as_list), vowel_count
+    return ''.join(result), vowel_count
