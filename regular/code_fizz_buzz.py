@@ -13,3 +13,15 @@ def fizzbuzz(num: int) -> Union[str, int]:
         result = num
 
     return result
+
+def fizzbuzz2(num: int) -> Union[str, int]:
+    parts = []
+    if num % 3 == 0:
+        parts.append('Fizz')
+    if num % 5 == 0:
+        parts.append('Buzz')
+
+    if parts:
+        return ' '.join(parts)
+    else:
+        return num
