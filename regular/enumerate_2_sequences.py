@@ -3,7 +3,8 @@ countries = 'Australia Spain Global Argentina USA Mexico'.split()
 
 
 def enumerate_names_countries():
-    n = len(names)
+    i = 0
 
-    for i in range(n):
-        print(f'{i + 1}. {names[i]:<11}{countries[i]}')
+    for name, country in zip(names, countries):
+        print(f'{i + 1}. {name:<11}{country}')
+        i += 1
