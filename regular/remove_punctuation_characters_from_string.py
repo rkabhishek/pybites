@@ -1,9 +1,11 @@
 def remove_punctuation(input_string):
     punctuation_string = "!\"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~"
-    result = ""
+    non_punctuation_char_list = []
+
     for ch in input_string:
         if ch not in punctuation_string:
-            result += ch
+            non_punctuation_char_list.append(ch)
+    return ''.join(non_punctuation_char_list)
 
-    return result
+
 
