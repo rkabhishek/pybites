@@ -11,5 +11,5 @@ def remove_punctuation(input_string):
 
 
 def remove_punctuation_using_translate(input_string):
-    table = str.maketrans({key: None for key in punctuation})
+    table = str.maketrans("", "", punctuation)
     return input_string.translate(table)
