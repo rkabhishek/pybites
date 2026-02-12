@@ -1,5 +1,3 @@
 def countdown():
-    n = 100
-    while n >= 1:
-        yield n
-        n -= 1
+    for i in range(100, 0, -1):
+        yield i
