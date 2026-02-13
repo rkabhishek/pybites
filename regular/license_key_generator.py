@@ -1,4 +1,4 @@
-import random
+import secrets
 import string
 
 POOL = string.ascii_uppercase + string.digits
@@ -9,7 +9,7 @@ def gen_key(parts: int = 4, chars_per_part: int = 8) -> str:
 
     result = []
     for _ in range(parts):
-        part = ''.join(random.choice(POOL) for _ in range(chars_per_part))
+        part = ''.join(secrets.choice(POOL) for _ in range(chars_per_part))
         result.append(part)
 
     return '-'.join(result)
